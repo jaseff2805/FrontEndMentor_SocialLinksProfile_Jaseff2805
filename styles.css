@@ -1,0 +1,133 @@
+/* ======================= */
+/*   Variables y resets    */
+/* ======================= */
+
+:root {
+  --clr-green: hsl(75, 94%, 57%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-gray-700: hsl(0, 0%, 20%);
+  --clr-gray-800: hsl(0, 0%, 12%);
+  --clr-gray-900: hsl(0, 0%, 8%);
+
+  --radius-card: 1.5rem;
+  --radius-button: 0.75rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 14px; /* style guide body copy */
+}
+
+/* Fondo general (pantalla completa negra) */
+.bg-body-custom {
+  background-color: var(--clr-gray-900);
+  color: var(--clr-white);
+}
+
+/* ======================= */
+/*      Profile card       */
+/* ======================= */
+
+.profile-card {
+  background-color: var(--clr-gray-800);
+  border-radius: var(--radius-card);
+  padding: 2.5rem 2.5rem 2.25rem;
+  max-width: 384px;
+  width: 100%;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* Avatar */
+.profile-card__avatar {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+}
+
+/* Nombre */
+.profile-card__name {
+  font-weight: 700;
+}
+
+/* Ubicación en verde */
+.profile-card__location {
+  font-weight: 600;
+  color: var(--clr-green);
+}
+
+/* Bio */
+.profile-card__bio {
+  color: var(--clr-white);
+  opacity: 0.8;
+}
+
+/* ======================= */
+/*        Social links     */
+/* ======================= */
+
+.btn-profile {
+  background-color: var(--clr-gray-700);
+  color: var(--clr-white);
+  border-radius: var(--radius-button);
+  border: none;
+  font-weight: 600;
+  padding: 0.8rem 1.2rem;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease,
+    transform 150ms ease;
+}
+
+/* Hover / focus como en el diseño */
+.btn-profile:hover,
+.btn-profile:focus-visible {
+  background-color: var(--clr-green);
+  color: var(--clr-gray-900);
+  transform: translateY(-1px);
+}
+
+/* Evitar que Bootstrap cambie el color del texto al ser "btn" */
+.btn-profile:active {
+  background-color: var(--clr-green);
+  color: var(--clr-gray-900);
+}
+
+/* ======================= */
+/*       Attribution       */
+/* ======================= */
+
+.attribution {
+  color: var(--clr-gray-700);
+}
+
+.attribution a {
+  color: var(--clr-green);
+  text-decoration: none;
+}
+
+.attribution a:hover,
+.attribution a:focus-visible {
+  text-decoration: underline;
+}
+
+/* ======================= */
+/*        Responsivo       */
+/* ======================= */
+
+@media (min-width: 768px) {
+  .profile-card {
+    padding-inline: 3rem;
+  }
+}
