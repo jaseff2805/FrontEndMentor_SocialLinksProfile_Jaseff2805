@@ -58,6 +58,7 @@ body {
 
 /* Nombre */
 .profile-card__name {
+  color: var(--clr-white);
   font-weight: 700;
 }
 
@@ -109,7 +110,7 @@ body {
 /* ======================= */
 
 .attribution {
-  color: var(--clr-gray-700);
+  color: var(--clr-white);
 }
 
 .attribution a {
